@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_kau"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.kaukaukau.LoginFragment"
+        android:label="   "
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_joinFragment"
+            app:destination="@id/joinFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_timetableFragment"
+            app:destination="@id/timetableFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinFragment"
+        android:name="com.example.kaukaukau.JoinFragment"
+        android:label="회원가입"
+        tools:layout="@layout/fragment_join" >
+        <action
+            android:id="@+id/action_joinFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timetableFragment"
+        android:name="com.example.kaukaukau.TimetableFragment"
+        android:label="시간표"
+        tools:layout="@layout/fragment_timetable" />
+    <fragment
+        android:id="@+id/transportationFragment"
+        android:name="com.example.kaukaukau.TransportationFragment"
+        android:label="교통정보"
+        tools:layout="@layout/fragment_transportation" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.kaukaukau.CalendarFragment"
+        android:label="학사일정"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.kaukaukau.MenuFragment"
+        android:label="학식메뉴"
+        tools:layout="@layout/fragment_menu" />
+</navigation>
